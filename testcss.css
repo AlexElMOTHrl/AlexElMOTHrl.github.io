@@ -1,0 +1,121 @@
+@keyframes cp {
+  0% {
+    color: rgba(0, 0, 0, 0);
+    filter: blur(45px);
+  }
+
+  40% {
+    filter: blur(0);
+  }
+
+  50% {
+    color: white;
+  }
+}
+
+@keyframes resizeUp {
+  0% {
+    transform: scale(30%);
+    line-height: 100%;
+  }
+
+  85% {
+    transform: scale(300%);
+    line-height: 110%;
+  }
+
+  99.5% {
+    transform: scale(2000%);
+    line-height: 300%;
+  }
+
+  100% {
+    transform: scale(2000%);
+    line-height: 300%;
+    visibility: hidden;
+  }
+}
+
+@keyframes flash {
+  0% {
+    background-color: rgb(255, 255, 255);
+  }
+
+  10% {
+    background-color: rgba(8, 8, 8, 0);
+  }
+
+  95% {
+    background-color: rgba(8, 8, 8, 0);
+  }
+
+  100% {
+    background-color: rgb(30, 30, 30);
+  }
+}
+
+#flash {
+  position: absolute;
+  object-fit: fill;
+  vertical-align: middle;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgb(0, 0, 0);
+  /*animation parameters*/
+  animation-name: flash;
+  animation-delay: 2s;
+  animation-iteration-count: 6;
+  animation-duration: 6.845s;
+  animation-fill-mode: forwards;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: rgb(36, 36, 36);
+}
+
+* {
+  color: rgba(0, 0, 0, 0);
+  font-family: cursive;
+}
+
+#cptitle {
+  position: relative;
+  color: white;
+  font-size: 400%;
+  text-align: center;
+  margin-top: 22%;
+  /*animation parameters*/
+  animation-name: cp, resizeUp;
+  animation-fill-mode: forwards;
+
+  animation-delay: 1.7s;
+  animation-iteration-count: 6;
+  animation-duration: 6.845s;
+}
+
+/*.cptitle2 {
+    position: relative;
+    color: rgba(255, 255, 255, 0);
+    font-size: 120px;
+    text-align: center;
+    margin-top: 15%;
+    animation parameters -----------
+    animation-name: cp, resizeUp;
+    animation-fill-mode: forwards;
+    transition-timing-function: cubic-bezier(0, 0, 0, 1);
+    animation-delay: 9.145s;
+    animation-iteration-count: 1;
+    animation-duration: 9.145s;
+}*/
+
+.cptitlecontainer {
+  padding: 1em;
+  height: 100%;
+  background-color: #e6151500;
+  overflow: hidden;
+}
