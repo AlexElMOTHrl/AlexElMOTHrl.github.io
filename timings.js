@@ -11,4 +11,4 @@ function increment() {
 	}
 }
 
-setTimeout("setInterval('increment()', 6845)", 2000);
+setTimeout("setInterval('increment()', 6845)", 10000);
