@@ -3,11 +3,13 @@
 $.getJSON('https://ipinfo.io/json', function(data) {
 	const info = JSON.parse(JSON.stringify(data, null, 2));
 
+	let lineas = Array("IP"+info.ip,"LOCALIZACIÓN<br>"+info.loc, "PELEAS<br>GITANAS", "ZOOFILIA<br>EXTREMA", "TODO ESO Y<br>MUCHO MAS EN", "SuperCP<br>.com");
+	document.getElementById('cptitle').innerHTML = lineas[0];
+
 	//document.getElementById('cptitle').innerHTML = "IP<br>" + info.ip;
 });
 
-//let lineas = Array("IP"+info.ip,"LOCALIZACIÓN<br>"+info.loc, "PELEAS<br>GITANAS", "ZOOFILIA<br>EXTREMA", "TODO ESO Y<br>MUCHO MAS EN", "SuperCP<br>.com");
-document.getElementById('cptitle').innerHTML = lineas[0];
+
 
 var i = 0;
 function increment() {
