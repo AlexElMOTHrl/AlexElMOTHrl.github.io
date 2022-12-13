@@ -1,19 +1,13 @@
 @keyframes pop {
-  0% { font-size: 300%; height:7em; }
-  25% { font-size: 700%; height: 2em; }
-  100% { font-size: 300%; height: 7em; }
+  0% {transform: scale(1);}
+  10% {transform: scale(2);}
+  100% {transform: scale(1); filter: blur(15px)}
 }
 
-@-webkit-keyframes pop {
-  0% { font-size: 300%; height:7em; }
-  25% { font-size: 700%; height: 2em; }
-  100% { font-size: 300%; height: 7em; }
-}
-
-@-moz-keyframes pop {
-  0% { font-size: 300%; height:7em; }
-  25% { font-size: 700%; height: 2em; }
-  100% { font-size: 300%; height: 7em; }
+@keyframes wup {
+  0% {transform: scale(1);}
+  50% {transform: scale(0.97);}
+  100% {transform: scale(1);}
 }
 
 /*###########################*/
@@ -39,10 +33,7 @@ body {
 }
 
 #button {
-  resize: none;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   width: 100%;
-  height: 7em;
   background-color: #4c6533;
   border-radius: 0.2em;
   border-color: #75b635;
@@ -50,20 +41,28 @@ body {
   padding: 0.5em;
   font-size: 300%;
   border-style: solid;
+  text-size-adjust: none;
+}
+
+#button p {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 200%;
+  text-size-adjust: none;
+  background-color: #26262600;
+}
+
+#button:active p {
+  animation: pop 0.2s;
+  animation-fill-mode: forwards;
 }
 
 #button:hover {
-  animation: pop 1s;
-  background-color: #40522c;
+  animation: hover 1s;
+  background-color: #3d5227;
+  border-color: #6a8c43;
 }
 
 #button:active {
-  background-color: #303e20;
-  transform: scale(1.02);
-}
-
-#button.animated { 
-  -moz-animation: pop 1s;
-  -webkit-animation: pop 1s;
-  animation: pop 1s;
+  animation: wup 0.1s;
 }
