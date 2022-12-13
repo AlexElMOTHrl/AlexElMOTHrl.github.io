@@ -30,3 +30,7 @@ body {
   font-size: 300%;
   border-style: solid;
 }
+
+#button:hover button {
+  background-color: #40522c;
+}
