@@ -8,14 +8,14 @@ body {
 
 .title {
   background-color: #262626;
-  border-radius: 10px;
+  border-radius: 10em;
 }
 
 .title h1 {
   color: white;
-  padding: 5px;
+  padding: 10px;
   text-align: center;
-  font-size: 100%;
+  font-size: 110%;
 }
 
 #button {
@@ -24,11 +24,11 @@ body {
 
 #button button {
   background-color: #262626;
-  border-radius: 20px;
+  border-radius: 20em;
   border-color: #75b635;
   color: rgb(255, 255, 255);
   padding: 15px 32px;
   text-align: center;
   display: inline-block;
-  font-size: 16px;
+  font-size: 120%;
 }
