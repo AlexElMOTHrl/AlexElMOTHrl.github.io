@@ -10,5 +10,3 @@ function increment() {
 	}
 }
 
-setTimeout("setInterval('increment()', 6845)", 2000);
-
