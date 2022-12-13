@@ -1,16 +1,25 @@
 let numbers = Array(1,2,3);
-
-/* document.getElementById('cptitle').innerHTML = lineas[0]; */
-
-/* var i = 0;
-function increment() {
-	i++;
-	document.getElementById('cptitle').innerHTML = lineas[i];
-	if (i > lineas.length - 1) {
-		window.location.replace("testcss2.html");
-	}
-} */
+var isUsed = false;
+const button = document.getElementById('button');
 
 function RandomNumber() {
-	document.getElementById('button').innerHTML = lineas[0];
+	Animate();
+	if (!isUsed) {
+		document.getElementById('button').innerHTML = numbers[0];
+		isUsed = true;
+	} else {
+		document.getElementById('button').innerHTML = numbers[Math.floor(Math.random()*numbers.length)];
+	}
+}
+
+$(".button").bind("webkitAnimationEnd mozAnimationEnd animationEnd", function(){
+	$(this).removeClass("animated")  
+})
+  
+$(".button").hover(function(){
+	$(this).addClass("animated");        
+})
+  
+function Animate() {
+	document.getElementById('button').button = 'pop';
 }
