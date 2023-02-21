@@ -5,7 +5,7 @@ const button = document.getElementById('button');
 function RandomNumber() {
 	Animate();
 	if (!isUsed) {
-		document.getElementById('textAnimation').innerHTML = numbers[4];
+		document.getElementById('textAnimation').innerHTML = numbers[3];
 		isUsed = true;
 	} else {
 		document.getElementById('textAnimation').innerHTML = numbers[Math.floor(Math.random()*numbers.length)];
